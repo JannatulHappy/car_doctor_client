@@ -8,7 +8,7 @@ const Bookings = () => {
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`;
     useEffect(() => {
-        fetch(url)
+        fetch(url,{credentials:"include"})
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [url]);
@@ -56,7 +56,7 @@ const Bookings = () => {
     return (
         <div>
             <h2 className="text-5xl">Your bookings: {bookings.length}</h2>
-            <div className="overflow-x-auto w-full">
+            <div className="w-full overflow-x-auto">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
