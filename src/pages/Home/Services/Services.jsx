@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import useServices from "../../../hooks/useServices";
 
@@ -11,7 +11,7 @@ const Services = () => {
     //         .then(res => res.json())
     //         .then(data => setServices(data));
     // }, [])
-    // DRY-do not repeat yourself
+    // DRY-do not repeat younnrself
     const services=useServices("http://localhost:5000/services")
 
     return (
